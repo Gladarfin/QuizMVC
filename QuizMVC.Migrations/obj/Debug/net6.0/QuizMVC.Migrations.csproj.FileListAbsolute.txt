@@ -1,0 +1,15 @@
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net6.0\QuizMVC.Migrations.deps.json
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net6.0\QuizMVC.Migrations.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net6.0\QuizMVC.Migrations.pdb
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.csproj.AssemblyReference.cache
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.AssemblyInfoInputs.cache
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.AssemblyInfo.cs
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.csproj.CoreCompileInputs.cache
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\refint\QuizMVC.Migrations.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.pdb
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\ref\QuizMVC.Migrations.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net6.0\QuizMVC.Data.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net6.0\QuizMVC.Data.pdb
+D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net6.0\QuizMVC.Migrations.csproj.CopyComplete

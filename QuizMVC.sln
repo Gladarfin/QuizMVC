@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.App", "QuizMVC.App\QuizMVC.App.csproj", "{89255ACD-FCF5-4D23-A0D7-4434FFE6740B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.Models", "QuizMVC.Models\QuizMVC.Models.csproj", "{042CD6C0-5DAD-4021-9465-902DF92DE3CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.Migrations", "QuizMVC.Migrations\QuizMVC.Migrations.csproj", "{9C2F6D39-96EF-45CC-9687-4772F866C269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.Data", "QuizMVC.Data\QuizMVC.Data.csproj", "{8C7173E9-EA27-4049-ACBD-6903C092791C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89255ACD-FCF5-4D23-A0D7-4434FFE6740B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89255ACD-FCF5-4D23-A0D7-4434FFE6740B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89255ACD-FCF5-4D23-A0D7-4434FFE6740B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89255ACD-FCF5-4D23-A0D7-4434FFE6740B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042CD6C0-5DAD-4021-9465-902DF92DE3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042CD6C0-5DAD-4021-9465-902DF92DE3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042CD6C0-5DAD-4021-9465-902DF92DE3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042CD6C0-5DAD-4021-9465-902DF92DE3CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2F6D39-96EF-45CC-9687-4772F866C269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2F6D39-96EF-45CC-9687-4772F866C269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2F6D39-96EF-45CC-9687-4772F866C269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2F6D39-96EF-45CC-9687-4772F866C269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
