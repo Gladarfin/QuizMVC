@@ -13,3 +13,5 @@ D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net7.0\QuizMVC.Migrations.dll
 D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net7.0\refint\QuizMVC.Migrations.dll
 D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net7.0\QuizMVC.Migrations.pdb
 D:\Projects\QuizMVC\QuizMVC.Migrations\obj\Debug\net7.0\ref\QuizMVC.Migrations.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net7.0\QuizMVC.Models.dll
+D:\Projects\QuizMVC\QuizMVC.Migrations\bin\Debug\net7.0\QuizMVC.Models.pdb

@@ -10,3 +10,6 @@ D:\Projects\QuizMVC\QuizMVC.Data\obj\Debug\net7.0\QuizMVC.Data.dll
 D:\Projects\QuizMVC\QuizMVC.Data\obj\Debug\net7.0\refint\QuizMVC.Data.dll
 D:\Projects\QuizMVC\QuizMVC.Data\obj\Debug\net7.0\QuizMVC.Data.pdb
 D:\Projects\QuizMVC\QuizMVC.Data\obj\Debug\net7.0\ref\QuizMVC.Data.dll
+D:\Projects\QuizMVC\QuizMVC.Data\bin\Debug\net7.0\QuizMVC.Models.dll
+D:\Projects\QuizMVC\QuizMVC.Data\bin\Debug\net7.0\QuizMVC.Models.pdb
+D:\Projects\QuizMVC\QuizMVC.Data\obj\Debug\net7.0\QuizMVC.Data.csproj.CopyComplete

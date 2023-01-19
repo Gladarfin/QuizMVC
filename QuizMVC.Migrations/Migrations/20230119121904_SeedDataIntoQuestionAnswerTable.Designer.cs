@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using QuizMVC.Data;
@@ -12,9 +13,11 @@ using QuizMVC.Data;
 namespace QuizMVC.Migrations.Migrations
 {
     [DbContext(typeof(QuizMvcDbContext))]
-    partial class QuizMvcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230119121904_SeedDataIntoQuestionAnswerTable")]
+    partial class SeedDataIntoQuestionAnswerTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

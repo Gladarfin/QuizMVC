@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using QuizMVC.Data;
@@ -12,9 +13,11 @@ using QuizMVC.Data;
 namespace QuizMVC.Migrations.Migrations
 {
     [DbContext(typeof(QuizMvcDbContext))]
-    partial class QuizMvcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230119064410_InitialDatabase")]
+    partial class InitialDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,7 +56,7 @@ namespace QuizMVC.Migrations.Migrations
                         .HasColumnType("real");
 
                     b.Property<DateTime>("RegistrationDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Surname")
                         .IsRequired()
@@ -108,7 +111,7 @@ namespace QuizMVC.Migrations.Migrations
                         .HasColumnType("text");
 
                     b.Property<DateTime>("Updated")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.HasKey("Id");
 
@@ -133,92 +136,6 @@ namespace QuizMVC.Migrations.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("QuestionAnswers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            QuestionId = 1,
-                            RightAnswer = "1966"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            QuestionId = 2,
-                            RightAnswer = "hanover, germany"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            QuestionId = 3,
-                            RightAnswer = "light"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            QuestionId = 4,
-                            RightAnswer = "freddie mercury"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            QuestionId = 5,
-                            RightAnswer = "19"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            QuestionId = 6,
-                            RightAnswer = "simone simons"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            QuestionId = 7,
-                            RightAnswer = "snake"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            QuestionId = 8,
-                            RightAnswer = "true"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            QuestionId = 9,
-                            RightAnswer = "slash"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            QuestionId = 10,
-                            RightAnswer = "the dark side of the moon"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            QuestionId = 11,
-                            RightAnswer = "kali"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            QuestionId = 12,
-                            RightAnswer = "delicate sound of thunder"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            QuestionId = 13,
-                            RightAnswer = "rock around the clock"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            QuestionId = 14,
-                            RightAnswer = "i don't want to miss a thing"
-                        });
                 });
 
             modelBuilder.Entity("QuizMVC.Models.Quiz.QuestionChoice", b =>
@@ -232,7 +149,7 @@ namespace QuizMVC.Migrations.Migrations
                     b.Property<string>("Choice")
                         .IsRequired()
                         .HasColumnType("text");
-
+                    
                     b.Property<int>("QuestionId")
                         .HasColumnType("integer");
 
@@ -250,13 +167,13 @@ namespace QuizMVC.Migrations.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("Completed")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<float>("FinalScore")
                         .HasColumnType("real");
 
                     b.Property<DateTime>("Started")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<List<string>>("UserAnswers")
                         .IsRequired()

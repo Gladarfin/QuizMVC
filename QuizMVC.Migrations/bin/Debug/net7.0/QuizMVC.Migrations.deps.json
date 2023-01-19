@@ -177,10 +177,16 @@
       },
       "QuizMVC.Data/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.2"
+          "Microsoft.EntityFrameworkCore": "7.0.2",
+          "QuizMVC.Models": "1.0.0"
         },
         "runtime": {
           "QuizMVC.Data.dll": {}
+        }
+      },
+      "QuizMVC.Models/1.0.0": {
+        "runtime": {
+          "QuizMVC.Models.dll": {}
         }
       }
     }
@@ -297,6 +303,11 @@
       "hashPath": "npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512"
     },
     "QuizMVC.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuizMVC.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

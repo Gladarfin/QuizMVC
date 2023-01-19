@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using QuizMVC.Data;
@@ -12,9 +13,11 @@ using QuizMVC.Data;
 namespace QuizMVC.Migrations.Migrations
 {
     [DbContext(typeof(QuizMvcDbContext))]
-    partial class QuizMvcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230119103827_SeedDataIntoQuestionsTable")]
+    partial class SeedDataIntoQuestionsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -113,6 +116,120 @@ namespace QuizMVC.Migrations.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Questions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "In which year did Psychedelic rock emerge?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5235)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Where is the lead singer of the Scorpions from?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5251)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Wise man said just walk this way, To the dawn of the ______",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5252)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "What was the name of Queen's vocalist?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5254)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "How many studio albums have Scorpions released?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5255)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Who is the lead singer of Epica?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5257)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "In 1991, Metallica released their album 'Metallica'. What animal is on the cover artwork? ",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5258)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Iron Maiden singer Bruce Dickinson is also a qualified pilot. True or false?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5259)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Guitarist Saul Hudson Is Better Known By Which Name?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5261)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CategoryId = 6,
+                            IsActive = false,
+                            QuestionText = "Which classic rock album is sometimes said to be a soundtrack to The Wizard of Oz?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5262)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Which goddess inspired the Rolling Stones' logo?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5263)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Which Pink Floyd recording became the first rock album to be played in space?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5264)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "What was the first rock-n-roll song to hit #1 on the charts?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5266)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CategoryId = 6,
+                            IsActive = true,
+                            QuestionText = "Which Aerosmith song was nominated for both Best Original Song and Worst Original Song?",
+                            Updated = new DateTime(2023, 1, 19, 15, 38, 27, 157, DateTimeKind.Local).AddTicks(5267)
+                        });
                 });
 
             modelBuilder.Entity("QuizMVC.Models.Quiz.QuestionAnswer", b =>
@@ -133,92 +250,6 @@ namespace QuizMVC.Migrations.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("QuestionAnswers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            QuestionId = 1,
-                            RightAnswer = "1966"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            QuestionId = 2,
-                            RightAnswer = "hanover, germany"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            QuestionId = 3,
-                            RightAnswer = "light"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            QuestionId = 4,
-                            RightAnswer = "freddie mercury"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            QuestionId = 5,
-                            RightAnswer = "19"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            QuestionId = 6,
-                            RightAnswer = "simone simons"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            QuestionId = 7,
-                            RightAnswer = "snake"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            QuestionId = 8,
-                            RightAnswer = "true"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            QuestionId = 9,
-                            RightAnswer = "slash"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            QuestionId = 10,
-                            RightAnswer = "the dark side of the moon"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            QuestionId = 11,
-                            RightAnswer = "kali"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            QuestionId = 12,
-                            RightAnswer = "delicate sound of thunder"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            QuestionId = 13,
-                            RightAnswer = "rock around the clock"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            QuestionId = 14,
-                            RightAnswer = "i don't want to miss a thing"
-                        });
                 });
 
             modelBuilder.Entity("QuizMVC.Models.Quiz.QuestionChoice", b =>

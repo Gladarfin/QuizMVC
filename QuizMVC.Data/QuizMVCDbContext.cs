@@ -18,4 +18,10 @@ public class QuizMvcDbContext: DbContext
     public DbSet<QuestionAnswer> QuestionAnswers { get; set; }
     public DbSet<QuestionChoice> QuestionChoices { get; set; }
     public DbSet<Quiz> Quizzes { get; set; }
+
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Seed();
+    }
 }
