@@ -768,7 +768,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.2"
+          "Microsoft.EntityFrameworkCore": "7.0.2",
+          "QuizMVC.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/QuizMVC.Data.dll": {}

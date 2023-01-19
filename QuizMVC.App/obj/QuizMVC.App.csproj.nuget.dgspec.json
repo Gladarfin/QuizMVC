@@ -131,7 +131,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Projects\\QuizMVC\\QuizMVC.Models\\QuizMVC.Models.csproj": {
+                "projectPath": "D:\\Projects\\QuizMVC\\QuizMVC.Models\\QuizMVC.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

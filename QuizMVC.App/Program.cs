@@ -5,7 +5,7 @@ using QuizMVC.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("QuizMVCConnection");
 builder.Services.AddDbContext<QuizMvcDbContext>(options =>
     options.UseNpgsql(connectionString,
         x => x.MigrationsAssembly("QuizMVC.Migrations")));

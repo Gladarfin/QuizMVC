@@ -273,13 +273,24 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.2"
+          "Microsoft.EntityFrameworkCore": "7.0.2",
+          "QuizMVC.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/QuizMVC.Data.dll": {}
         },
         "runtime": {
           "bin/placeholder/QuizMVC.Data.dll": {}
+        }
+      },
+      "QuizMVC.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/QuizMVC.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuizMVC.Models.dll": {}
         }
       }
     }
@@ -682,6 +693,11 @@
       "type": "project",
       "path": "../QuizMVC.Data/QuizMVC.Data.csproj",
       "msbuildProject": "../QuizMVC.Data/QuizMVC.Data.csproj"
+    },
+    "QuizMVC.Models/1.0.0": {
+      "type": "project",
+      "path": "../QuizMVC.Models/QuizMVC.Models.csproj",
+      "msbuildProject": "../QuizMVC.Models/QuizMVC.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
