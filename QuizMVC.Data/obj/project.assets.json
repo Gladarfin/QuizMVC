@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "EntityFrameworkCore.DataEncryption/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/EntityFrameworkCore.DataEncryption.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/EntityFrameworkCore.DataEncryption.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/7.0.2": {
         "type": "package",
         "dependencies": {
@@ -201,6 +217,9 @@
       "QuizMVC.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "EntityFrameworkCore.DataEncryption": "4.0.0"
+        },
         "compile": {
           "bin/placeholder/QuizMVC.Models.dll": {}
         },
@@ -211,6 +230,26 @@
     }
   },
   "libraries": {
+    "EntityFrameworkCore.DataEncryption/4.0.0": {
+      "sha512": "O4MftM7FeSQyh6HNJBSLjphTgcVcdbHWTeHqHp5Ss7gKTotUV3BoZHqyYpahTTt+0H0gEJVF6QqBFqJsSRNqCg==",
+      "type": "package",
+      "path": "entityframeworkcore.dataencryption/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "entityframeworkcore.dataencryption.4.0.0.nupkg.sha512",
+        "entityframeworkcore.dataencryption.nuspec",
+        "icon.png",
+        "lib/net6.0/EntityFrameworkCore.DataEncryption.dll",
+        "lib/net6.0/EntityFrameworkCore.DataEncryption.xml",
+        "lib/net7.0/EntityFrameworkCore.DataEncryption.dll",
+        "lib/net7.0/EntityFrameworkCore.DataEncryption.xml",
+        "lib/netstandard2.0/EntityFrameworkCore.DataEncryption.dll",
+        "lib/netstandard2.0/EntityFrameworkCore.DataEncryption.xml"
+      ]
+    },
     "Microsoft.EntityFrameworkCore/7.0.2": {
       "sha512": "5QEspjTHk/cgM98AaB12mDXF7jlInlYhG0gxS6X8ZJ2rzmyIAsvYNEwoOUifd/gt5v5HblYClYfZ9YYIEjSkew==",
       "type": "package",
@@ -529,6 +568,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "EntityFrameworkCore.DataEncryption >= 4.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
       "QuizMVC.Models >= 1.0.0"
     ]
@@ -581,6 +621,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "EntityFrameworkCore.DataEncryption": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.2, )"

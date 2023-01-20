@@ -83,3 +83,4 @@ D:\Projects\QuizMVC\QuizMVC.App\obj\Debug\net7.0\refint\QuizMVC.App.dll
 D:\Projects\QuizMVC\QuizMVC.App\obj\Debug\net7.0\QuizMVC.App.pdb
 D:\Projects\QuizMVC\QuizMVC.App\obj\Debug\net7.0\QuizMVC.App.genruntimeconfig.cache
 D:\Projects\QuizMVC\QuizMVC.App\obj\Debug\net7.0\ref\QuizMVC.App.dll
+D:\Projects\QuizMVC\QuizMVC.App\bin\Debug\net7.0\EntityFrameworkCore.DataEncryption.dll

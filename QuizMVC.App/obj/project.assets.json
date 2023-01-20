@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net7.0": {
+      "EntityFrameworkCore.DataEncryption/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.0"
+        },
+        "compile": {
+          "lib/net7.0/EntityFrameworkCore.DataEncryption.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/EntityFrameworkCore.DataEncryption.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -768,6 +784,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "EntityFrameworkCore.DataEncryption": "4.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "QuizMVC.Models": "1.0.0"
         },
@@ -782,6 +799,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "EntityFrameworkCore.DataEncryption": "4.0.0",
           "Microsoft.EntityFrameworkCore.Relational": "7.0.2",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
           "QuizMVC.Data": "1.0.0"
@@ -796,6 +814,9 @@
       "QuizMVC.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "EntityFrameworkCore.DataEncryption": "4.0.0"
+        },
         "compile": {
           "bin/placeholder/QuizMVC.Models.dll": {}
         },
@@ -806,6 +827,26 @@
     }
   },
   "libraries": {
+    "EntityFrameworkCore.DataEncryption/4.0.0": {
+      "sha512": "O4MftM7FeSQyh6HNJBSLjphTgcVcdbHWTeHqHp5Ss7gKTotUV3BoZHqyYpahTTt+0H0gEJVF6QqBFqJsSRNqCg==",
+      "type": "package",
+      "path": "entityframeworkcore.dataencryption/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "entityframeworkcore.dataencryption.4.0.0.nupkg.sha512",
+        "entityframeworkcore.dataencryption.nuspec",
+        "icon.png",
+        "lib/net6.0/EntityFrameworkCore.DataEncryption.dll",
+        "lib/net6.0/EntityFrameworkCore.DataEncryption.xml",
+        "lib/net7.0/EntityFrameworkCore.DataEncryption.dll",
+        "lib/net7.0/EntityFrameworkCore.DataEncryption.xml",
+        "lib/netstandard2.0/EntityFrameworkCore.DataEncryption.dll",
+        "lib/netstandard2.0/EntityFrameworkCore.DataEncryption.xml"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -1866,6 +1907,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "EntityFrameworkCore.DataEncryption >= 4.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 7.0.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.2",
       "Microsoft.AspNetCore.Identity.UI >= 7.0.2",
@@ -1931,6 +1973,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "EntityFrameworkCore.DataEncryption": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.2, )"

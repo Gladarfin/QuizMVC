@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using QuizMVC.Models.Main;
 using QuizMVC.Models.Quiz;
 
 namespace QuizMVC.Data;
@@ -10,12 +11,14 @@ public static class ModelBuilderExtensions
 {
     public static void Seed(this ModelBuilder modelBuilder)
     {
-        // modelBuilder.Entity<QuestionAnswer>().HasData(
-        //     new QuestionAnswer
-        //     {
-        //         Id = 1,
-        //         QuestionId = 1,
-        //         RightAnswer="1966"
-        //     });
+        modelBuilder.Entity<User>().HasData(
+            new User
+            {
+                Id = 3,
+                Username = "TestUser",
+                Password = "somepassword123",
+                Email = "user@gmail.com",
+                RegistrationDate = DateTime.Now
+            });
     }
 }

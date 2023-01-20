@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "Q1ZPPAAbUXyAQH5D8vxEVRga5aPEvX7hI/zZPT6fdPZDKo2acVIusaU41CqTZXIfxMgcO83y3w3ZZPqkRYMMGA==",
+  "dgSpecHash": "x/Mk3mopNzdIzeNXeUteQ9gDmFsQQqjSppEthfppGAfPKVhIPZLc5yVX31z8tfpMDuFEPoNqdX8jZhqanwT02A==",
   "success": true,
   "projectFilePath": "D:\\Projects\\QuizMVC\\QuizMVC.Models\\QuizMVC.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\entityframeworkcore.dataencryption\\4.0.0\\entityframeworkcore.dataencryption.4.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

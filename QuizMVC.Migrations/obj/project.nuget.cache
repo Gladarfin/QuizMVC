@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7R4FarPVicufRzrg8BLMGAqpZ+Cua4lZlk484xRvR/FSvBHMRwq+atbwY3vRCn0Id6eCw6uhMGQ3Up2QUgRKCg==",
+  "dgSpecHash": "2jOZ2GHv3+hh1sAHtBK5XC43Rnf2r+MysfYfFYeeWBOueykjCfBowmbMKt7u1RI9HY9eEocn3BA9BJH6Y++z6A==",
   "success": true,
   "projectFilePath": "D:\\Projects\\QuizMVC\\QuizMVC.Migrations\\QuizMVC.Migrations.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Bartimaeus\\.nuget\\packages\\entityframeworkcore.dataencryption\\4.0.0\\entityframeworkcore.dataencryption.4.0.0.nupkg.sha512",
     "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
     "C:\\Users\\Bartimaeus\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.2\\microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",

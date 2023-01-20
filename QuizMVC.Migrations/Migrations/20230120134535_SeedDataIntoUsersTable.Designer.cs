@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using QuizMVC.Data;
@@ -12,9 +13,11 @@ using QuizMVC.Data;
 namespace QuizMVC.Migrations.Migrations
 {
     [DbContext(typeof(QuizMvcDbContext))]
-    partial class QuizMvcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230120134535_SeedDataIntoUsersTable")]
+    partial class SeedDataIntoUsersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,14 +71,25 @@ namespace QuizMVC.Migrations.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 3,
-                            DateOfBirth = new DateOnly(1990, 1, 1),
-                            Email = "user@gmail.com",
+                            Id = 1,
+                            DateOfBirth = new DateOnly(1, 1, 1),
+                            Email = "brusto@gmail.com",
                             IsDeleted = false,
-                            Password = "wDEilregHMQqhWuH7CJVdQ==",
+                            Password = "Cu/NhoayNvnl7n3+KLt/tA==",
                             Rating = 0f,
-                            RegistrationDate = new DateTime(2023, 1, 20, 20, 26, 22, 499, DateTimeKind.Local).AddTicks(4134),
-                            Username = "TestUser"
+                            RegistrationDate = new DateTime(2023, 1, 20, 18, 45, 34, 940, DateTimeKind.Local).AddTicks(1160),
+                            Username = "FirstAdmin"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DateOfBirth = new DateOnly(1, 1, 1),
+                            Email = "moderatoro@gmail.com",
+                            IsDeleted = false,
+                            Password = "muq7X5z13Y7euCvOqOZW9b8oUizhORWHUkc59ttiTA4=",
+                            Rating = 0f,
+                            RegistrationDate = new DateTime(2023, 1, 20, 18, 45, 34, 940, DateTimeKind.Local).AddTicks(1179),
+                            Username = "FirstModerator"
                         });
                 });
 
