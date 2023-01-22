@@ -18,8 +18,8 @@ namespace QuizMVC.Migrations.Migrations
                 columns: new[] { "Id", "DateOfBirth", "Email", "IsDeleted", "Name", "Password", "Rating", "RegistrationDate", "Surname", "Username" },
                 values: new object[,]
                 {
-                    { 1, new DateOnly(1, 1, 1), "brusto@gmail.com", false, null, "Cu/NhoayNvnl7n3+KLt/tA==", 0f, new DateTime(2023, 1, 20, 18, 45, 34, 940, DateTimeKind.Utc).AddTicks(1160), null, "FirstAdmin" },
-                    { 2, new DateOnly(1, 1, 1), "moderatoro@gmail.com", false, null, "muq7X5z13Y7euCvOqOZW9b8oUizhORWHUkc59ttiTA4=", 0f, new DateTime(2023, 1, 20, 18, 46, 34, 940, DateTimeKind.Utc).AddTicks(1179), null, "FirstModerator" }
+                    { 1, new DateOnly(1900, 1, 1), "brusto@gmail.com", false, null, "Cu/NhoayNvnl7n3+KLt/tA==", 0f, new DateTime(2023, 1, 20, 18, 45, 34, 940, DateTimeKind.Utc).AddTicks(1160), null, "FirstAdmin" },
+                    { 2, new DateOnly(1900, 1, 1), "moderatoro@gmail.com", false, null, "muq7X5z13Y7euCvOqOZW9b8oUizhORWHUkc59ttiTA4=", 0f, new DateTime(2023, 1, 20, 18, 46, 34, 940, DateTimeKind.Utc).AddTicks(1179), null, "FirstModerator" }
                 });
         }
 

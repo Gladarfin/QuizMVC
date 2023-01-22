@@ -13,4 +13,5 @@ public class Question
     public string QuestionText { get; set; }
     public bool IsActive { get; set; }
     public DateTime Updated { get; set; }
+    public int QuestionTypeId { get; set; }
 }
