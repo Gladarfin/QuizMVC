@@ -9,6 +9,7 @@ var connectionString = builder.Configuration.GetConnectionString("QuizMVCConnect
 builder.Services.AddDbContext<QuizMvcDbContext>(options =>
     options.UseNpgsql(connectionString,
         x => x.MigrationsAssembly("QuizMVC.Migrations")));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)

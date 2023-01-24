@@ -1,6 +1,5 @@
 ﻿namespace QuizMVC.Models.Main;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.EntityFrameworkCore.DataEncryption;
 
 public class User
 {

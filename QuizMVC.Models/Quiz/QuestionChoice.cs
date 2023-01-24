@@ -7,8 +7,10 @@ public class QuestionChoice
 {
     [Key]
     public int Id { get; set; }
-    [ForeignKey("Question")]
     public int QuestionId { get; set; }
+    [ForeignKey("QuestionId")]
+    public Question Question { get; set; }
+    
     [Required]
     public string Choice { get; set; }
 }
