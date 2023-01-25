@@ -17,7 +17,7 @@ public class QuizMvcDbContext: DbContext
     {
         _provider = new AesProvider(_encryptionKey, _encryptionIV);
     }
-    
+
     public DbSet<User> Users { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Question> Questions { get; set; }

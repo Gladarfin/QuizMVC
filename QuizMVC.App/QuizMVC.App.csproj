@@ -31,4 +31,26 @@
       <ProjectReference Include="..\QuizMVC.Models\QuizMVC.Models.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Pages" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Tables\Views\Categories\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\QuestionAnswers\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\QuestionChoices\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\Questions\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\QuestionTypes\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\Shared\Error.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\Shared\_Layout.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\Shared\_LoginPartial.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\Shared\_ValidationScriptsPartial.cshtml" />
+      <AdditionalFiles Include="Areas\Tables\Views\Users\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\QuestionChoices\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Tables\QuestionTypes\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
