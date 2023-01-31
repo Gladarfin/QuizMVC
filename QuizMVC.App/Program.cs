@@ -18,7 +18,6 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -40,8 +39,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapAreaControllerRoute(
-    name: "Tables",
+    name:"Tables",
     areaName:"Tables",
+    pattern:"{controller}/{action=Index}/{id?}");
+
+app.MapAreaControllerRoute(
+    name:"Quiz",
+    areaName:"Quiz",
     pattern:"{controller}/{action=Index}/{id?}");
 
 app.MapControllerRoute(

@@ -82,6 +82,9 @@ namespace QuizMVC.Migrations.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
@@ -111,6 +114,9 @@ namespace QuizMVC.Migrations.Migrations
                     b.Property<DateTime>("Updated")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -127,7 +133,8 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "Which of the following statements is incorrect about encapsulation?",
                             QuestionTypeId = 2,
-                            Updated = new DateTime(2023, 1, 24, 21, 23, 9, 658, DateTimeKind.Local).AddTicks(693)
+                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2952),
+                            isDeleted = false
                         },
                         new
                         {
@@ -136,7 +143,8 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "Place the historical events in chronological order.",
                             QuestionTypeId = 5,
-                            Updated = new DateTime(2023, 1, 24, 21, 23, 9, 658, DateTimeKind.Local).AddTicks(707)
+                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2966),
+                            isDeleted = false
                         },
                         new
                         {
@@ -145,7 +153,8 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "Just like human beings, computers communicate through receiving and sending messages. We refer to those message receiving components as _____ devices and those which send messages as _____ devices.",
                             QuestionTypeId = 6,
-                            Updated = new DateTime(2023, 1, 24, 21, 23, 9, 658, DateTimeKind.Local).AddTicks(709)
+                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2968),
+                            isDeleted = false
                         },
                         new
                         {
@@ -154,7 +163,8 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "A scientist is conducting a study to determine how well a new medication treats ear infections. The scientist tells the participants to put 10 drops in their infected ear each day. After two weeks, all participants' ear infections had healed. Which of the following changes to the design of this study would most improve the ability to test if the new medication effectively treats ear infections?",
                             QuestionTypeId = 7,
-                            Updated = new DateTime(2023, 1, 24, 21, 23, 9, 658, DateTimeKind.Local).AddTicks(710)
+                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2970),
+                            isDeleted = false
                         });
                 });
 
@@ -173,6 +183,9 @@ namespace QuizMVC.Migrations.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.HasIndex("QuestionId");
@@ -184,25 +197,29 @@ namespace QuizMVC.Migrations.Migrations
                         {
                             Id = 15,
                             QuestionId = 15,
-                            RightAnswer = "56"
+                            RightAnswer = "56",
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 16,
                             QuestionId = 16,
-                            RightAnswer = "68636164656762706669"
+                            RightAnswer = "68636164656762706669",
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 17,
                             QuestionId = 17,
-                            RightAnswer = "inputoutput"
+                            RightAnswer = "inputoutput",
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 18,
                             QuestionId = 18,
-                            RightAnswer = "74"
+                            RightAnswer = "74",
+                            isDeleted = false
                         });
                 });
 
@@ -221,6 +238,9 @@ namespace QuizMVC.Migrations.Migrations
                     b.Property<int>("QuestionId")
                         .HasColumnType("integer");
 
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
+
                     b.HasKey("Id");
 
                     b.HasIndex("QuestionId");
@@ -232,121 +252,141 @@ namespace QuizMVC.Migrations.Migrations
                         {
                             Id = 56,
                             Choice = "Encapsulation is the way to add functions in a user defined structure.",
-                            QuestionId = 15
+                            QuestionId = 15,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 57,
                             Choice = "Encapsulation is defined as the process of enclosing one or more items within a physical or logical package.",
-                            QuestionId = 15
+                            QuestionId = 15,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 58,
                             Choice = "Abstraction allows making relevant information visible and encapsulation enables a programmer to implement the desired level of abstraction.",
-                            QuestionId = 15
+                            QuestionId = 15,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 59,
                             Choice = "Encapsulation, in object oriented programming methodology, prevents access to implementation details.",
-                            QuestionId = 15
+                            QuestionId = 15,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 60,
                             Choice = "All of above",
-                            QuestionId = 15
+                            QuestionId = 15,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 61,
                             Choice = "Last great Roman–Persian War.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 62,
                             Choice = "War of the Grand Alliance with France; also called \"Nine Years \" or \"War of the League of Augsburg\" or \"King William's War\"",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 63,
                             Choice = "Sui dynasty in China.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 64,
                             Choice = "Christianization of Kievan Rus'",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 65,
                             Choice = "The Bible is translated into English by John Wycliffe.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 66,
                             Choice = "Alexander III dies. His son Nicholas II succeeds him as emperor.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 67,
                             Choice = "Vasco da Gama begins his first voyage from Europe to India and back.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 68,
                             Choice = "War of Pacification in Nanzhong.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 69,
                             Choice = "Theodore Roosevelt becomes the 26th President of the United States.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 70,
                             Choice = "Otto von Bismarck was born.",
-                            QuestionId = 16
+                            QuestionId = 16,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 71,
                             Choice = "",
-                            QuestionId = 17
+                            QuestionId = 17,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 72,
                             Choice = "Have participants put ear drops in both their infected ear and healthy ear",
-                            QuestionId = 18
+                            QuestionId = 18,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 73,
                             Choice = "Create a second group of participants with ear infections who do not use any ear drops",
-                            QuestionId = 18
+                            QuestionId = 18,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 74,
                             Choice = "Have participants use ear drops for only one week",
-                            QuestionId = 18
+                            QuestionId = 18,
+                            isDeleted = false
                         },
                         new
                         {
                             Id = 75,
                             Choice = "Create a second group of participants with ear infections who use 15 drops a day",
-                            QuestionId = 18
+                            QuestionId = 18,
+                            isDeleted = false
                         });
                 });
 
@@ -361,6 +401,9 @@ namespace QuizMVC.Migrations.Migrations
                     b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 
@@ -390,6 +433,9 @@ namespace QuizMVC.Migrations.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("isDeleted")
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 

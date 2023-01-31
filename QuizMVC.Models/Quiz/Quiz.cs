@@ -13,4 +13,5 @@ public class Quiz
     public DateTime Completed { get; set; }
     public List<string> UserAnswers { get; set; }
     public float FinalScore { get; set; }
+    public bool isDeleted { get; set; }
 }

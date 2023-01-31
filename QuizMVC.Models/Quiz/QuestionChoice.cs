@@ -13,4 +13,6 @@ public class QuestionChoice
     
     [Required]
     public string Choice { get; set; }
+    
+    public bool isDeleted { get; set; }
 }

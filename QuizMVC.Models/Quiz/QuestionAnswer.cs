@@ -12,4 +12,6 @@ public class QuestionAnswer
     public Question Question { get; set; }
     [Required]
     public string RightAnswer { get; set; }
+    
+    public bool isDeleted { get; set; }
 }

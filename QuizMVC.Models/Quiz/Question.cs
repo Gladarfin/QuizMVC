@@ -17,4 +17,6 @@ public class Question
     public int QuestionTypeId { get; set; }
     [ForeignKey("QuestionTypeId")]
     public QuestionType QuestionType { get; set; }
+    
+    public bool isDeleted { get; set; }
 }
