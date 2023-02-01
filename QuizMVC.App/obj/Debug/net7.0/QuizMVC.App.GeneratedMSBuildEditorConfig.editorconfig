@@ -120,6 +120,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGFibGVzXFZpZXdzXFF1ZXN0aW9uc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projects/QuizMVC/QuizMVC.App/Areas/Tables/Views/QuestionTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGFibGVzXFZpZXdzXFF1ZXN0aW9uVHlwZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/QuizMVC/QuizMVC.App/Areas/Tables/Views/QuestionTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGFibGVzXFZpZXdzXFF1ZXN0aW9uVHlwZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/QuizMVC/QuizMVC.App/Areas/Tables/Views/QuestionTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGFibGVzXFZpZXdzXFF1ZXN0aW9uVHlwZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
