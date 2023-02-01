@@ -75,7 +75,6 @@ namespace QuizMVC.Migrations.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
@@ -133,7 +132,7 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "Which of the following statements is incorrect about encapsulation?",
                             QuestionTypeId = 2,
-                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2952),
+                            Updated = new DateTime(2023, 2, 1, 17, 18, 23, 560, DateTimeKind.Local).AddTicks(4893),
                             isDeleted = false
                         },
                         new
@@ -143,7 +142,7 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "Place the historical events in chronological order.",
                             QuestionTypeId = 5,
-                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2966),
+                            Updated = new DateTime(2023, 2, 1, 17, 18, 23, 560, DateTimeKind.Local).AddTicks(4909),
                             isDeleted = false
                         },
                         new
@@ -153,7 +152,7 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "Just like human beings, computers communicate through receiving and sending messages. We refer to those message receiving components as _____ devices and those which send messages as _____ devices.",
                             QuestionTypeId = 6,
-                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2968),
+                            Updated = new DateTime(2023, 2, 1, 17, 18, 23, 560, DateTimeKind.Local).AddTicks(4911),
                             isDeleted = false
                         },
                         new
@@ -163,7 +162,7 @@ namespace QuizMVC.Migrations.Migrations
                             IsActive = true,
                             QuestionText = "A scientist is conducting a study to determine how well a new medication treats ear infections. The scientist tells the participants to put 10 drops in their infected ear each day. After two weeks, all participants' ear infections had healed. Which of the following changes to the design of this study would most improve the ability to test if the new medication effectively treats ear infections?",
                             QuestionTypeId = 7,
-                            Updated = new DateTime(2023, 1, 31, 14, 56, 30, 765, DateTimeKind.Local).AddTicks(2970),
+                            Updated = new DateTime(2023, 2, 1, 17, 18, 23, 560, DateTimeKind.Local).AddTicks(4913),
                             isDeleted = false
                         });
                 });

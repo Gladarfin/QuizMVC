@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.Migrations", "QuizM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.Data", "QuizMVC.Data\QuizMVC.Data.csproj", "{8C7173E9-EA27-4049-ACBD-6903C092791C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMVC.Repositories", "QuizMVC.Repositories\QuizMVC.Repositories.csproj", "{68A38896-C568-410A-8954-3CDCD6DA25D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C7173E9-EA27-4049-ACBD-6903C092791C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68A38896-C568-410A-8954-3CDCD6DA25D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A38896-C568-410A-8954-3CDCD6DA25D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A38896-C568-410A-8954-3CDCD6DA25D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A38896-C568-410A-8954-3CDCD6DA25D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

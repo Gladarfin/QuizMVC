@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuizMVC.Models.Quiz.Question>
+
+@{
+    ViewData["Title"] = "Questions";
+}
+
+<h1>Questions</h1>
+
+<div class="table-container">
+    <table class="table table-bordered table-hover" id="questions">
+        <thead>
+        <tr>
+            <th>
+                Question Id
+            </th>
+            <th>
+                Category Name
+            </th>
+            <th>
+                Question Text
+            </th>
+            <th>
+                Question Type
+            </th>
+            <th>
+                Is Active
+            </th>
+            <th>
+                Updated
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var question in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(q => question.Id)</td>
+                <td>@Html.DisplayFor(q => question.Category.Name)</td>
+                <td>@Html.DisplayFor(q => question.QuestionText)</td>
+                <td>@Html.DisplayFor(q => question.QuestionType.Type)</td>
+                <td>@Html.DisplayFor(q => question.IsActive)</td>
+                <td>@Html.DisplayFor(q => question.Updated)</td>
+                <td>
+                    <a asp-controller="Questions" asp-action="Edit" asp-route-id="@question.Id" class="btn btn-primary m-1 ms-1">Edit</a>
+                    <a asp-controller="Questions" asp-action="Details"  asp-route-id="@question.Id" class="btn btn-success m-1 ms-1">Details</a>
+                    <a href="#"  class="btn btn-danger m-1 ms-1">Delete</a>  
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

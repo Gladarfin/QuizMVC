@@ -31,6 +31,7 @@
       <ProjectReference Include="..\QuizMVC.Data\QuizMVC.Data.csproj" />
       <ProjectReference Include="..\QuizMVC.Migrations\QuizMVC.Migrations.csproj" />
       <ProjectReference Include="..\QuizMVC.Models\QuizMVC.Models.csproj" />
+      <ProjectReference Include="..\QuizMVC.Repositories\QuizMVC.Repositories.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<QuizMVC.Models.Main.User>
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="table-container">
+    <table class="table table-bordered table-hover" id="question-type">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(u => u.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(u => u.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(u => u.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(u => u.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(u => u.Surname)
+            </th>
+            <th>
+                Date of Birth
+            </th>
+            <th>
+                Is Deleted
+            </th>
+            <th>
+                @Html.DisplayNameFor(u => u.Rating)
+            </th>
+            <th>
+                Registration Date
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(u => user.Id)</td>
+                <td>@Html.DisplayFor(u => user.Username)</td>
+                <td>@Html.DisplayFor(u => user.Email)</td>
+                <td>@Html.DisplayFor(u => user.Name)</td>
+                <td>@Html.DisplayFor(u => user.Surname)</td>
+                <td>@Html.DisplayFor(u => user.DateOfBirth)</td>
+                <td>@Html.DisplayFor(u => user.IsDeleted)</td>
+                <td>@Html.DisplayFor(u => user.Rating)</td>
+                <td>@Html.DisplayFor(u => user.RegistrationDate)</td>
+                <td>
+                    <a asp-controller="Users" asp-action="Edit" asp-route-id="@user.Id" class="btn btn-primary m-1 ms-1">Edit</a>           
+                    <a asp-controller="Users" asp-action="Details" asp-route-id="@user.Id" class="btn btn-success m-1 ms-1">Details</a>   
+                    <a href="#" class="btn btn-danger m-1 ms-1">Delete</a>      
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

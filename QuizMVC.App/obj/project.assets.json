@@ -4219,6 +4219,20 @@
         "runtime": {
           "bin/placeholder/QuizMVC.Models.dll": {}
         }
+      },
+      "QuizMVC.Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "QuizMVC.Data": "1.0.0",
+          "QuizMVC.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QuizMVC.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuizMVC.Repositories.dll": {}
+        }
       }
     }
   },
@@ -11777,6 +11791,11 @@
       "type": "project",
       "path": "../QuizMVC.Models/QuizMVC.Models.csproj",
       "msbuildProject": "../QuizMVC.Models/QuizMVC.Models.csproj"
+    },
+    "QuizMVC.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../QuizMVC.Repositories/QuizMVC.Repositories.csproj",
+      "msbuildProject": "../QuizMVC.Repositories/QuizMVC.Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11792,7 +11811,8 @@
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.1",
       "QuizMVC.Data >= 1.0.0",
       "QuizMVC.Migrations >= 1.0.0",
-      "QuizMVC.Models >= 1.0.0"
+      "QuizMVC.Models >= 1.0.0",
+      "QuizMVC.Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11836,6 +11856,9 @@
             },
             "D:\\Projects\\QuizMVC\\QuizMVC.Models\\QuizMVC.Models.csproj": {
               "projectPath": "D:\\Projects\\QuizMVC\\QuizMVC.Models\\QuizMVC.Models.csproj"
+            },
+            "D:\\Projects\\QuizMVC\\QuizMVC.Repositories\\QuizMVC.Repositories.csproj": {
+              "projectPath": "D:\\Projects\\QuizMVC\\QuizMVC.Repositories\\QuizMVC.Repositories.csproj"
             }
           }
         }

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<QuizMVC.Models.Quiz.QuestionType>
+
+@{
+    ViewData["Title"] = "Question Type";
+}
+
+<h1>Question Type</h1>
+
+<div class="table-container">
+    <table class="table table-bordered table-hover" id="question-type">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(qt => qt.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(qt => qt.Type)
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var questionType in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(qt => questionType.Id)</td>
+                <td>@Html.DisplayFor(c => questionType.Type)</td>
+                <td>
+                    <a asp-controller="QuestionTypes" asp-action="Edit" asp-route-id="@questionType.Id" class="btn btn-primary m-1 ms-1">Edit</a>           
+                    <a asp-controller="QuestionTypes" asp-action="Details" asp-route-id="@questionType.Id" class="btn btn-success m-1 ms-1">Details</a>     
+                    <a href="#"  class="btn btn-danger m-1 ms-1">Delete</a>     
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

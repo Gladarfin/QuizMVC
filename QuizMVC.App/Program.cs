@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using QuizMVC.Data;
+using QuizMVC.Repositories.Interfaces;
+using QuizMVC.Repositories.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +11,7 @@ var connectionString = builder.Configuration.GetConnectionString("QuizMVCConnect
 builder.Services.AddDbContext<QuizMvcDbContext>(options =>
     options.UseNpgsql(connectionString,
         x => x.MigrationsAssembly("QuizMVC.Migrations")));
-
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)

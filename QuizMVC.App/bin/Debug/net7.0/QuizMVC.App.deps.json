@@ -19,7 +19,8 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.1",
           "QuizMVC.Data": "1.0.0",
           "QuizMVC.Migrations": "1.0.0",
-          "QuizMVC.Models": "1.0.0"
+          "QuizMVC.Models": "1.0.0",
+          "QuizMVC.Repositories": "1.0.0"
         },
         "runtime": {
           "QuizMVC.App.dll": {}
@@ -2656,6 +2657,15 @@
         "runtime": {
           "QuizMVC.Models.dll": {}
         }
+      },
+      "QuizMVC.Repositories/1.0.0": {
+        "dependencies": {
+          "QuizMVC.Data": "1.0.0",
+          "QuizMVC.Models": "1.0.0"
+        },
+        "runtime": {
+          "QuizMVC.Repositories.dll": {}
+        }
       }
     }
   },
@@ -4104,6 +4114,11 @@
       "sha512": ""
     },
     "QuizMVC.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "QuizMVC.Repositories/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
