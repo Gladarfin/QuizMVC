@@ -7,11 +7,11 @@ public class QuestionAnswer
 {
     [Key]
     public int Id { get; set; }
-    public int QuestionId { get; set; }
+    public Guid QuestionId { get; set; }
     [ForeignKey("QuestionId")]
     public Question Question { get; set; }
     [Required]
     public string RightAnswer { get; set; }
     
-    public bool isDeleted { get; set; }
+    public bool IsDeleted { get; set; }
 }

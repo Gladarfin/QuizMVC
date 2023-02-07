@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using QuizMVC.Data;
@@ -12,9 +13,11 @@ using QuizMVC.Data;
 namespace QuizMVC.Migrations.Migrations
 {
     [DbContext(typeof(QuizMvcDbContext))]
-    partial class QuizMvcDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230207084014_ChangeIdsTypeToGuid")]
+    partial class ChangeIdsTest
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -123,12 +126,12 @@ namespace QuizMVC.Migrations.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3bbab72f-fb87-4256-a207-4f9d34a24b84"),
+                            Id = new Guid("f4f15a1b-5c35-43e2-9035-1135f445804f"),
                             CategoryId = 2,
                             IsActive = true,
                             QuestionText = "Which of the following statements is incorrect about encapsulation?",
                             QuestionTypeId = 2,
-                            Updated = new DateTime(2023, 2, 7, 14, 49, 7, 262, DateTimeKind.Local).AddTicks(4277),
+                            Updated = new DateTime(2023, 2, 7, 13, 40, 14, 192, DateTimeKind.Local).AddTicks(4030),
                             isDeleted = false
                         });
                 });

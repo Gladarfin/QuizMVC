@@ -13,16 +13,12 @@ public class UnitOfWork : IUnitOfWork
     {
         _context = context;
         Category = new CategoryRepository(_context);
-        QuestionAnswer = new QuestionAnswerRepository(_context);
-        QuestionChoice = new QuestionChoiceRepository(_context);
         Question = new QuestionRepository(_context);
         QuestionType = new QuestionTypeRepository(_context);
         User = new UserRepository(_context);
     }
     
     public ICategoryRepository Category { get; private set; }
-    public IQuestionAnswerRepository QuestionAnswer { get; private set; }
-    public IQuestionChoiceRepository QuestionChoice { get; private set;}
     public IQuestionRepository Question { get; private set;}
     public IQuestionTypeRepository QuestionType { get; private set;}
     public IUserRepository User { get; private set; }

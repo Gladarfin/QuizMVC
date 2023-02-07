@@ -41,8 +41,6 @@
 
     <ItemGroup>
       <AdditionalFiles Include="Areas\Tables\Views\Categories\Index.cshtml" />
-      <AdditionalFiles Include="Areas\Tables\Views\QuestionAnswers\Index.cshtml" />
-      <AdditionalFiles Include="Areas\Tables\Views\QuestionChoices\Index.cshtml" />
       <AdditionalFiles Include="Areas\Tables\Views\Questions\Index.cshtml" />
       <AdditionalFiles Include="Areas\Tables\Views\QuestionTypes\Index.cshtml" />
       <AdditionalFiles Include="Areas\Tables\Views\Shared\Error.cshtml" />
@@ -55,6 +53,12 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\QuestionChoices\Index.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Tables\QuestionTypes\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Tables\Views\QuestionChoices\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Tables\Views\QuestionChoices\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Tables\Views\QuestionChoices\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Tables\Views\QuestionAnswers\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Tables\Views\QuestionAnswers\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Tables\Views\QuestionAnswers\Index.cshtml" />
     </ItemGroup>
 
 </Project>

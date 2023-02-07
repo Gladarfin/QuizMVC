@@ -14,13 +14,7 @@ public class QuestionsController  : Controller
     {
         _context = context;
     }
-    
-    
-    protected override void Dispose(bool disposing)
-    {
-        _context.Dispose();
-    }
-    
+
     public async Task<IActionResult> Index()
     {
         var questions = await _context.Questions.Select(q => new Question()
@@ -45,13 +39,23 @@ public class QuestionsController  : Controller
         return View(questions);
     }
     
-    public IActionResult Edit(int id)
+    public IActionResult Edit(Guid id)
     {
         return View(_context.Questions.Select(x => x.Id == id).FirstOrDefault());
     }
     
-    public IActionResult Details(int id)
+    public IActionResult Details(Guid id)
     {
         return View(_context.Questions.Select(x => x.Id == id).FirstOrDefault());
+    }
+
+    public IActionResult Create()
+    {
+        var qtList = _context.QuestionTypes.Where(x => !x.IsDeleted).ToList();
+        qtList.Insert(0, new QuestionType {  Id = 0, Type = "-- Select Question Type --"});
+        ViewBag.message = qtList;
+        
+        
+        return View();
     }
 }

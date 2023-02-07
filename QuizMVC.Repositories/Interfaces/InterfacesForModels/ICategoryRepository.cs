@@ -6,7 +6,7 @@ public interface ICategoryRepository: IGenericRepository<Category>
 {
     public async Task<IEnumerable<Category>> GetAllCategories()
     {
-        return await GetAllAsync(filter: c => !c.isDeleted,
+        return await GetAllAsync(filter: c => !c.IsDeleted,
             orderBy: c => c.OrderBy(x => x.Id));
     }
 
@@ -17,7 +17,7 @@ public interface ICategoryRepository: IGenericRepository<Category>
     
     public void Delete(Category category)
     {
-        category.isDeleted = true;
+        category.IsDeleted = true;
         Update(category);
     }
 }

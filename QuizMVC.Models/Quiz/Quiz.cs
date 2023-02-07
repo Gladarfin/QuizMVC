@@ -6,12 +6,14 @@ using System.ComponentModel.DataAnnotations;
 public class Quiz
 {
     [Key]
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     [ForeignKey("User")]
-    public int UserId { get; set; }
+    public Guid UserId { get; set; }
+    [Column(TypeName ="timestamp without time zone")]
     public DateTime Started { get; set; }
+    [Column(TypeName ="timestamp without time zone")]
     public DateTime Completed { get; set; }
     public List<string> UserAnswers { get; set; }
     public float FinalScore { get; set; }
-    public bool isDeleted { get; set; }
+    public bool IsDeleted { get; set; }
 }

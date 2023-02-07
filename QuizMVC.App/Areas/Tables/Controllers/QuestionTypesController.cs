@@ -34,7 +34,7 @@ public class QuestionTypesController : Controller
         {
             Id = await _unitOfWork.QuestionType.GetLastQuestionTypeId() + 1,
             Type = questionTypeDto.Type,
-            isDeleted = false
+            IsDeleted = false
         };
         await _unitOfWork.QuestionType.Add(questionType);
         return RedirectToAction("Index");

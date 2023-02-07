@@ -35,7 +35,7 @@ public class CategoriesController :Controller
             Id = await _unitOfWork.Category.GetLastCategoryId() + 1,
             Name = categoryDto.Name,
             Description = categoryDto.Description,
-            isDeleted = false
+            IsDeleted = false
         };
         await _unitOfWork.Category.Add(category);
         return RedirectToAction("Index");

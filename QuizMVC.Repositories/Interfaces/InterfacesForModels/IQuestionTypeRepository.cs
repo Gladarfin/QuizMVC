@@ -6,7 +6,7 @@ public interface IQuestionTypeRepository : IGenericRepository<QuestionType>
 {
     public async Task<IEnumerable<QuestionType>> GetAllQuestionTypes()
     {
-        return await GetAllAsync(filter: qt => !qt.isDeleted,
+        return await GetAllAsync(filter: qt => !qt.IsDeleted,
             orderBy: qt => qt.OrderBy(x => x.Id));
     }
 
@@ -19,7 +19,7 @@ public interface IQuestionTypeRepository : IGenericRepository<QuestionType>
     
     public void Delete(QuestionType questionType)
     {
-        questionType.isDeleted = true;
+        questionType.IsDeleted = true;
         Update(questionType);
     }
 }

@@ -10,5 +10,5 @@ public class Category
     public string Name { get; set; }
     public string? Description { get; set; }
     
-    public bool isDeleted { get; set; }
+    public bool IsDeleted { get; set; }
 }

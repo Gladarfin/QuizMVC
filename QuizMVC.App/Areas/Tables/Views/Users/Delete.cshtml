@@ -1,0 +1,21 @@
+@model QuizMVC.Models.Main.User
+
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete confirmation</h1>
+
+<h3>Are you sure you want to delete user <strong>@Model.Username?</strong></h3>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete"/>
+    </p>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

@@ -6,6 +6,6 @@ public interface IQuestionRepository : IGenericRepository<Question>
 {
     public void Delete(QuestionChoice questionChoice)
     {
-        questionChoice.isDeleted = true;
+        questionChoice.IsDeleted = true;
     }
 }

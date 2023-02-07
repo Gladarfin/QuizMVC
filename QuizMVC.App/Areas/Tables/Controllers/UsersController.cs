@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuizMVC.Data;
+using QuizMVC.Models.DTO;
 using QuizMVC.Models.Main;
+using QuizMVC.Repositories.Interfaces;
 
 namespace QuizMVC.App.Areas.Tables.Controllers;
 
@@ -9,46 +11,85 @@ namespace QuizMVC.App.Areas.Tables.Controllers;
 
 public class UsersController  : Controller
 {
-    private readonly QuizMvcDbContext _context;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public UsersController(QuizMvcDbContext context)
+    public UsersController(IUnitOfWork unitOfWork)
     {
-        _context = context;
-    }
-    
-    
-    protected override void Dispose(bool disposing)
-    {
-        _context.Dispose();
+        _unitOfWork = unitOfWork;
     }
     
     public async Task<IActionResult> Index()
     {
-        var users = await _context.Users
-            .Select(x => new User()
-            {
-                Id = x.Id,
-                Username = x.Username,
-                Email = x.Email,
-                Name = x.Name,
-                Surname = x.Surname,
-                DateOfBirth = x.DateOfBirth,
-                IsDeleted = x.IsDeleted,
-                RegistrationDate = x.RegistrationDate,
-                Rating = x.Rating
-            })
-            .OrderBy(x => x.Id)
-            .ToListAsync();
+        var users = await _unitOfWork.User.GetAllUsers();
         return View(users);
     }
-    
-    public IActionResult Edit(int id)
+
+    #region CRUD operations
+
+    public IActionResult Create()
     {
-        return View(_context.Users.Select(x => x.Id == id).FirstOrDefault());
+        return View();
     }
     
-    public IActionResult Details(int id)
+    [HttpPost]
+    public async Task<IActionResult> Create(UserDTO userDto)
     {
-        return View(_context.Users.Select(x => x.Id == id).FirstOrDefault());
+        var user = new User
+        {
+            Username = userDto.Username,
+            Password = userDto.Password,
+            Email = userDto.Email,
+            Name = userDto.Name,
+            Surname = userDto.Surname,
+            DateOfBirth = userDto.DateOfBirth,
+            IsDeleted = false
+        };
+        await _unitOfWork.User.Add(user);
+        return RedirectToAction("Index");
     }
+    
+    public async Task<IActionResult> Edit(Guid id)
+    {
+        return View(await _unitOfWork.User.GetByIdAsync(id));
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(Guid id, UserDTO userDto)
+    {
+        var userToUpdate = await _unitOfWork.User.GetByIdAsync(id);
+        
+        if (!ModelState.IsValid) 
+            return View(userToUpdate);
+        
+        userToUpdate.Username = userDto.Username;
+        userToUpdate.Password = userDto.Password;
+        userToUpdate.Email = userDto.Email;
+        userToUpdate.Name = userDto.Name;
+        userToUpdate.Surname = userDto.Surname;
+        userToUpdate.DateOfBirth = userDto.DateOfBirth;
+        
+        await _unitOfWork.User.Update(userToUpdate);
+        return RedirectToAction("Index");
+    }
+    
+    public async Task<IActionResult> Details(Guid id)
+    {
+        return View(await _unitOfWork.User.GetByIdAsync(id));
+    }
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var user = await _unitOfWork.User.GetByIdAsync(id);
+        return View(user);
+    }
+    
+
+    [HttpPost, ActionName("Delete")]
+    public async Task<IActionResult> DeleteConfirmed(Guid id)
+    {
+        var userToDelete = await _unitOfWork.User.GetByIdAsync(id);
+        _unitOfWork.User.Delete(userToDelete);
+        return RedirectToAction("Index");
+    }
+
+    #endregion
 }

@@ -14,7 +14,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         _context = context;
     }
     
-    public async Task<T> GetByIdAsync(int id)
+    public async Task<T> GetByIdAsync(object id)
     {
         var data = await _context.Set<T>().FindAsync(id);
         
